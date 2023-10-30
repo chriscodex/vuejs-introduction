@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 const msgg = 'message for test'
 const htmVariable = '<h1>Hello World</h1>'
+const urlImageTest = 'https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg'
 </script>
 
 <template>
@@ -17,6 +18,8 @@ const htmVariable = '<h1>Hello World</h1>'
   <h1 v-text="msgg"></h1>
   <h1 v-once v-html="htmVariable"></h1>
   <HelloWorld msg="message" />
+  <!-- Atributo reactivo -->
+  <img :src="urlImageTest" alt="alternativo">
 </template>
 
 <style scoped>
