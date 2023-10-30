@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+const msgg = 'message for test'
+const htmVariable = '<h1>Hello World</h1>'
 </script>
 
 <template>
@@ -11,6 +13,9 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <h1>{{msgg}}</h1>
+  <h1 v-text="msgg"></h1>
+  <h1 v-once v-html="htmVariable"></h1>
   <HelloWorld msg="message" />
 </template>
 
