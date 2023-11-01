@@ -1,25 +1,57 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-const msgg = 'message for test'
-const htmVariable = '<h1>Hello World</h1>'
-const urlImageTest = 'https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg'
+import HelloWorld from './components/HelloWorld.vue';
+import UserEvents from './components/UserEvents.vue';
+import ReactiveInput from './components/ReactiveInput.vue';
+import ComputeProperties from './components/ComputeProperties.vue';
+import Watcher from './components/Watcher.vue';
+import DinamicStyles from './components/DinamicStyles.vue';
+import DinamicStyles2 from './components/DinamicStyles2.vue';
+import Condicionales from './components/Condicionales.vue';
+import MultipleRender from './components/MultipleRender.vue';
+import ParentComponent from './components/caseComponent/ParentComponent.vue';
+import RaizComponent from './components/slotExample/RaizComponent.vue';
+import ParenComp from './components/comunicationParentChild/ParentComp.vue';
+import ParentComp from './components/comunicationChildParent/ParentComp.vue';
+import ParentC from './components/modelChildParent/ParentC.vue';
+const msgg = 'message for test';
+const htmVariable = '<h1>Hello World</h1>';
+const urlImageTest =
+  'https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg';
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <h1>{{msgg}}</h1>
+  <h1>{{ msgg }}</h1>
   <h1 v-text="msgg"></h1>
   <h1 v-once v-html="htmVariable"></h1>
   <HelloWorld msg="message" />
   <!-- Atributo reactivo -->
-  <img :src="urlImageTest" alt="alternativo">
+  <img :src="urlImageTest" />
+
+  <UserEvents />
+  <ReactiveInput />
+  <h3>Propiedades Computadas</h3>
+  <ComputeProperties />
+  <h3>Watcher</h3>
+  <Watcher />
+  <h3>Dinamic Styles</h3>
+  <DinamicStyles />
+  <h3>Dinamic Styles 2</h3>
+  <DinamicStyles2 />
+  <h3>Condicionales</h3>
+  <Condicionales />
+  <h3>Multiple Render</h3>
+  <MultipleRender />
+  <h3>Multiple Components - Child & Parent</h3>
+  <ParentComponent />
+  <h3>Slot</h3>
+  <RaizComponent />
+  <h3>Comunication</h3>
+  <h4>Parent - Son</h4>
+  <ParenComp />
+  <h4>Son - Parent</h4>
+  <ParentComp />
+  <h4>Model Son - Parent</h4>
+  <ParentC />
 </template>
 
 <style scoped>
